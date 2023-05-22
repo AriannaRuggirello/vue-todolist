@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="container" id="app">
+        <h1>TO DO LIST</h1>
+        <header>
+            <div class="row-center">
+                <!-- TEXT -->
+                <input type="text" placeholder="Add a new task">
+                <!-- BUTTON -->
+                <button>Add</button>
+            </div>
+        </header>
+
+        <main>
+        
+            <div class="row-around">
+                
+                <!-- LIST -->
+                <div class="col">
+                    <ul>
+                        <li v-for="task in tasks">{{task.text}}</li>
+                        
+                        
+                    </ul>
+                </div>
+
+                <!-- X MARK -->
+                <div class="col">
+                <i class="fa-solid fa-xmark"></i>
+                </div>
+         
+            </div>
+        </main>
+    </div>
+  
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
