@@ -22,22 +22,24 @@
         </header>
 
         <main>
-        
             <div class="row-around">
                 
                 <!-- LIST -->
                 <div class="col">
                     <ul>
-                        <li v-for="task in tasks">{{task.text}}</li>
-                        
-                        
+                        <li v-for="task in tasks" :class="(task.done === true) ? 'done' : ''">{{task.text}}</li>
                     </ul>
                 </div>
-
+     
                 <!-- X MARK -->
-                <div class="col">
+                <!-- <div class="col">
                 <i class="fa-solid fa-xmark"></i>
-                </div>
+                </div> -->
+
+                <!-- DONE -->
+                <!-- <div class="col">
+                <span>Done</span> -->
+            </div>
          
             </div>
         </main>

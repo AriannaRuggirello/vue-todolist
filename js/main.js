@@ -36,5 +36,17 @@ createApp({
 
            ]
         }   
+    },
+    methods: {
+        checkTask(){
+            if(this.done == true){
+                
+                console.log('text barrato');
+            }
+            else{
+                console.log('da fare');
+            }
+        }
+
     }  
 }).mount('#app')
