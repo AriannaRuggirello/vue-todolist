@@ -15,7 +15,7 @@
         <header>
             <div class="row-center">
                 <!-- TEXT -->
-                <input type="text" placeholder="Add a new task" v-model="newTask">
+                <input type="text" placeholder="Add a new task" v-model="newTask" @keyup.enter="addTask">
                 <!-- BUTTON -->
                 <button @click="addTask">Add</button>
             </div>
@@ -27,10 +27,11 @@
                 <li v-for="(task,idx) in tasks" :class="(task.done === true) ? 'done' : ''"> {{task.text}}
                     
 
-                <i class="fa-solid fa-xmark" @click="removeTask(idx)"></i> 
+                <i class="fa-solid fa-xmark" @click.stop="removeTask(idx)"></i> 
                 </li>
                
             </ul>
+            <h2 v-if="tasks.length === 0">Non ci sono task!</h2>
         </main>
     </div>
   

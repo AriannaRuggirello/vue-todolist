@@ -39,15 +39,17 @@ createApp({
         }   
     },
     methods: {
-        removeTask(indice){
-           this.tasks.splice(indice, 1);
-            
-        },
         addTask(){
             // unshift utilizzato per aggiungere una voce in testa
             this.tasks.unshift({text: this.newTask, done:false});
             this.newTask='';
-        }
+        },
+        removeTask(indice){
+           this.tasks.splice(indice, 1);
+          
+            
+        },
+     
 
     }  
 }).mount('#app')
