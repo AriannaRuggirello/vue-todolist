@@ -15,35 +15,22 @@
         <header>
             <div class="row-center">
                 <!-- TEXT -->
-                <input type="text" placeholder="Add a new task">
+                <input type="text" placeholder="Add a new task" v-model="newTask">
                 <!-- BUTTON -->
-                <button>Add</button>
+                <button @click="addTask">Add</button>
             </div>
         </header>
 
         <main>
             <!-- LIST -->
-           
-                <ul>
-                    <li v-for="(task,idx) in tasks" :class="(task.done === true) ? 'done' : ''"> {{task.text}}
-                        
+            <ul>
+                <li v-for="(task,idx) in tasks" :class="(task.done === true) ? 'done' : ''"> {{task.text}}
+                    
 
-                    <i class="fa-solid fa-xmark" @click="removeTask(idx)"></i> 
-                    </li>
-                   
-                </ul>
-          
-                
+                <i class="fa-solid fa-xmark" @click="removeTask(idx)"></i> 
+                </li>
                
-     
-            
-
-                <!-- DONE -->
-                <!-- <div class="col">
-                    <span>Done</span>
-                </div> -->
-         
-           
+            </ul>
         </main>
     </div>
   

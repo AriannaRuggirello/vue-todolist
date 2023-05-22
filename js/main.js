@@ -13,7 +13,8 @@ var { createApp } = Vue
 createApp({
     data(){
         return{
-           tasks : [
+            newTask: '',
+            tasks : [
             {
                 text: 'mandare una mail a Pinco Pallo',
                 done:true
@@ -41,6 +42,11 @@ createApp({
         removeTask(indice){
            this.tasks.splice(indice, 1);
             
+        },
+        addTask(){
+            // unshift utilizzato per aggiungere una voce in testa
+            this.tasks.unshift({text: this.newTask, done:false});
+            this.newTask='';
         }
 
     }  
