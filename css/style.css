@@ -63,9 +63,9 @@ input{
     justify-content: space-around;
 }
 
-.col{
+li{
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
 }
 
 .done{

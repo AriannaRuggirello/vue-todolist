@@ -38,14 +38,9 @@ createApp({
         }   
     },
     methods: {
-        checkTask(){
-            if(this.done == true){
-                
-                console.log('text barrato');
-            }
-            else{
-                console.log('da fare');
-            }
+        removeTask(indice){
+           this.tasks.splice(indice, 1);
+            
         }
 
     }  

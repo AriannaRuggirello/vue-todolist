@@ -22,26 +22,28 @@
         </header>
 
         <main>
-            <div class="row-around">
+            <!-- LIST -->
+           
+                <ul>
+                    <li v-for="(task,idx) in tasks" :class="(task.done === true) ? 'done' : ''"> {{task.text}}
+                        
+
+                    <i class="fa-solid fa-xmark" @click="removeTask(idx)"></i> 
+                    </li>
+                   
+                </ul>
+          
                 
-                <!-- LIST -->
-                <div class="col">
-                    <ul>
-                        <li v-for="task in tasks" :class="(task.done === true) ? 'done' : ''">{{task.text}}</li>
-                    </ul>
-                </div>
+               
      
-                <!-- X MARK -->
-                <!-- <div class="col">
-                <i class="fa-solid fa-xmark"></i>
-                </div> -->
+            
 
                 <!-- DONE -->
                 <!-- <div class="col">
-                <span>Done</span> -->
-            </div>
+                    <span>Done</span>
+                </div> -->
          
-            </div>
+           
         </main>
     </div>
   
